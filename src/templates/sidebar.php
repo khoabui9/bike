@@ -2,7 +2,8 @@
     echo '
                 <div class="col-sm-2 navbar-left">
                         <div class="text-center col-sm-12">
-                            <img src="../public/img/facebook-avatar.jpg" class="ava rounded mx-auto d-block img-fluid" alt="">
+                            <img src="../public/img/facebook-avatar.jpg" class="rounded-circle ava mx-auto d-block img-fluid" alt="">
+                            <h2>Username</h2>
                         </div>
                         <hr>
                         <div class="menu col-sm-12">

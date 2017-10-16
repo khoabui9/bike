@@ -10,7 +10,6 @@ body {
 	float: left;
 	padding: 0;
 }
-
 /*.dashboard {
 	height: 100vh;
 }
@@ -26,6 +25,10 @@ body {
 	padding: 0;
 }
 
+h2 {
+	color: white;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -33,6 +36,11 @@ ul {
     position: fixed;
     height: 100%;
     overflow: auto;
+}
+
+.scroll {
+	max-height: 100vh;
+	overflow-y: auto;
 }
 
 li a {
