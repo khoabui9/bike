@@ -10,16 +10,9 @@
 <body>
     <div class="row">
        <?php include '/templates/sidebar.php';?>
-       <div class="col-sm-10">
+       <div class="col-sm-10 scroll">
                 <div class="row  card-container">
-                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                        <div class="card" style="width: 15rem;">
-                           <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
-                            <div class="card-block">
-                                <h5 class="text-bold">Tawshif Ahsan Khan</h5>
-                            </div>
-                        </div>
-                    </div>
+                   <?php include '/dashboard/show.php';?>
                 </div>
             </div>
         </div>

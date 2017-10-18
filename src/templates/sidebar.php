@@ -8,7 +8,7 @@
                         <hr>
                         <div class="menu col-sm-12">
                             <ul>
-                              <li><a class="" href="#">Book a bike</a></li>
+                              <li><a class="" href="dashboard.php">Book a bike</a></li>
                               <li><a href="#">Account</a></li>
                               <li><a href="#">My Booking</a></li>
                             </ul>

@@ -1,0 +1,12 @@
+.bike_detail {
+	height: 500px;
+	 background-image: url('../img/1.jpg');
+	 background-size: cover;
+	 background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.btn-book {
+	margin-top: 20px;
+}
+
