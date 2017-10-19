@@ -11,6 +11,34 @@
     <div class="row">
        <?php include '/templates/sidebar.php';?>
        <div class="col-sm-10 scroll">
+                <div class="row">
+                    <h3 style="color: black;">Filter:</h3>
+                    <form>
+                        <select class="model custom-select">
+                          <option value="undefined" selected>Model</option>
+                          <option value="city">City</option>
+                          <option value="racing">Racing</option>
+                          <option value="fix">Fixed gear</option>
+                          <option value="road">Road</option>
+                          <option value="track">Track</option>
+                        </select>
+                        <select class="size custom-select">
+                          <option value="undefined" selected>Size</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                         <select value="undefined" class="location custom-select">
+                          <option value="undefined" selected>Location</option>
+                          <option value="niemi">Niemi</option>
+                          <option value="fellmania">fellmania</option>
+                          <option value="sta10">sta10</option>
+                        </select>
+                        <button type="submit" class="apply btn btn-warning">Apply</button>
+                    </form>
+                        </div>
                 <div class="row  card-container">
                    <?php include '/dashboard/show.php';?>
                 </div>

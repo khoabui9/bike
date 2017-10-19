@@ -18,7 +18,7 @@ body {
 	height: 500px;
 }*/
 .card-container {
-	padding: 0;
+	margin-bottom: 20px;
 }
 
 .text-center {
@@ -79,4 +79,10 @@ hr {
     height: auto;
 }
 
+a {
+    text-decoration: none !important;
+}
 
+.text {
+    color: black;
+}
