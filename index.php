@@ -1,3 +1,11 @@
+<?php
+include('login.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+header("location: src/dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
   <div class="container">
     <div class="text-center front-box well opac">
@@ -30,16 +39,17 @@
             <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
           </div>
           <div class="modal-body" style="padding:40px 50px;">
-            <form role="form">
+            <form action="" method="post" role="form">
               <div class="form-group">
-                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter email" name="username">
               </div>
               <div class="form-group">
                 <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" >
               </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <button type="submit" class="btn btn-success btn-block" value="Login" name="submit"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <span><?php echo $error; ?></span>
             </form>
           </div>
           <div class="modal-footer">

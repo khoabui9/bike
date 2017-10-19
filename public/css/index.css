@@ -1,0 +1,47 @@
+.modal-header, h4, .close {
+  background-color: #252839;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+}
+
+.front-box {
+    margin-top: 25%;
+}
+
+.container {
+    padding-right: 25% !important;
+    padding-left: 25% !important;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+/*.btn-default {
+  background-color: #252839 ;
+}*/
+
+.modal-footer {
+    padding: 15px 50px !important;
+    text-align: center !important;
+}
+
+.opac {
+  opacity: 0.85;
+}
+
+body {
+    background-image: url("https://images6.alphacoders.com/549/549198.jpg");
+    /* Center and scale the image nicely */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.use-fadeIn {
+  display: none;
+}
