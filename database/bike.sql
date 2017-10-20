@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 14, 2017 at 11:08 PM
+-- Generation Time: Oct 20, 2017 at 02:32 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -31,13 +31,31 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `bike`;
 CREATE TABLE IF NOT EXISTS `bike` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `img` text NOT NULL,
+  `name` text NOT NULL,
   `model` text NOT NULL,
   `size` int(11) NOT NULL,
   `available` tinyint(1) NOT NULL,
-  `location` int(11) NOT NULL,
+  `ref_location` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `location` (`location`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `location` (`ref_location`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bike`
+--
+
+INSERT INTO `bike` (`id`, `img`, `name`, `model`, `size`, `available`, `ref_location`) VALUES
+(1, '1.jpg', 'Bike 1', 'city', 2, 1, 1),
+(2, '2.jpg', 'Bike 2', 'fix gear', 1, 1, 1),
+(3, '3.jpg', 'Bike 3', 'track', 1, 1, 1),
+(4, '2.jpg', 'Bike 4', 'racing', 3, 1, 1),
+(5, '1.jpg', 'Bike 5', 'road', 4, 1, 1),
+(6, '3.jpg', 'bike 6', 'sport', 2, 1, 3),
+(7, '1.jpg', 'bike 7', 'road', 4, 1, 3),
+(8, '2.jpg', 'bike 8', 'track', 5, 1, 3),
+(9, '1.jpg', 'bike 9', 'racing', 5, 1, 2),
+(10, '3.jpg', 'bike 10', 'fix gear', 3, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -65,7 +83,16 @@ CREATE TABLE IF NOT EXISTS `location` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `place` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `location`
+--
+
+INSERT INTO `location` (`id`, `place`) VALUES
+(1, 'fellmania'),
+(2, 'niemi'),
+(3, 'sta10');
 
 -- --------------------------------------------------------
 
@@ -78,7 +105,9 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `bike_id` int(11) NOT NULL,
-  `time` date NOT NULL,
+  `time_start` time NOT NULL,
+  `time_end` time NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`),
   UNIQUE KEY `bike_id` (`bike_id`)
@@ -106,14 +135,19 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Constraints for table `bike`
 --
 ALTER TABLE `bike`
-  ADD CONSTRAINT `bike_ibfk_1` FOREIGN KEY (`id`) REFERENCES `reservation` (`bike_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `bike_ibfk_2` FOREIGN KEY (`location`) REFERENCES `location` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `bike_ibfk_2` FOREIGN KEY (`ref_location`) REFERENCES `location` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`bike_id`) REFERENCES `bike` (`id`);
 
 --
 -- Constraints for table `user`

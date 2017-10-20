@@ -7,6 +7,8 @@
     <script src="../public/bootstrap/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="../public/css/style.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="../public/css/bike_detail.css"  media="screen,projection"/>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
     <div class="row">
@@ -18,5 +20,6 @@
        </div>
     </div>
 <script type="text/javascript" src="../public/js/app.js"></script>
+<script type="text/javascript" src="../public/js/book.js"></script>
 </body>
 </html>
