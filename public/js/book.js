@@ -7,6 +7,28 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('Book ' + bike)
 })
 
+$(document).ready(function() {
+	book();
+}) 
+
 $( function() {
-	$( "#datepicker" ).datepicker();
+	$( "#datepicker" ).datepicker({
+		dateFormat: "yy-mm-dd"
+	});
 } );
+
+function book() {
+	$('.book').click(function() {
+		var id = $(this).attr('id');
+			$.ajax({
+	        method: 'GET',
+	        url: 'bike/checkbooking.php?' + 'id=' + id,
+	        success: function (html) {
+	        	console.log(html);
+	        	$(html).appendTo(document.body);
+	        },
+	        error: function () {
+	        }
+		})
+	})
+}

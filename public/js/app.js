@@ -23,7 +23,7 @@ function sort() {
 	        },
 	        error: function () {
 	        }
-    })
+    	})
 	})
 }
 

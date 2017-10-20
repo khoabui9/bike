@@ -35,47 +35,47 @@ echo '<div id="' . $row['id'] . '" class="col-sm-12 bike_detail" style="padding:
 		        <form>
 		          <div class="form-group">
 		            <label for="datepicker" class="form-control-label">Date:</label>
-		            <input type="text" class="form-control" id="datepicker">
+		            <input type="text" class="date' . $row['id'] . ' form-control" id="datepicker">
 		          </div>
 		          <div class="form-group">
-					    <select id="startTime" class="sod timeSelect custom-select">
+					    <select id="start' . $row['id'] . '" class="sod timeSelect custom-select">
 			          		<option value="ph" selected="selected">START</option>
 			          		<!-- More options loaded dynamically -->
-				        	<option value="08:00" class="time_00">08:00</option>
-				        	<option value="09:00" class="time_00">09:00</option>
-				        	<option value="10:00" class="time_00">10:00</option>
-				        	<option value="11:00" class="time_00">11:00</option>
-				        	<option value="12:00" class="time_00">12:00</option>
-				        	<option value="13:00" class="time_00">13:00</option>
-				        	<option value="14:00" class="time_00">14:00</option>
-				        	<option value="15:00" class="time_00">15:00</option>
-				        	<option value="16:00" class="time_00">16:00</option>
-				        	<option value="17:00" class="time_00">17:00</option>
-				        	<option value="18:00" class="time_00">18:00</option>
-				        	<option value="19:00" class="time_00">19:00</option>
+				        	<option value="8" class="time_8">08:00</option>
+				        	<option value="9" class="time_9">09:00</option>
+				        	<option value="10" class="time_10">10:00</option>
+				        	<option value="11" class="time_11">11:00</option>
+				        	<option value="12" class="time_12">12:00</option>
+				        	<option value="13" class="time_13">13:00</option>
+				        	<option value="14" class="time_14">14:00</option>
+				        	<option value="15" class="time_15">15:00</option>
+				        	<option value="16" class="time_16">16:00</option>
+				        	<option value="17" class="time_17">17:00</option>
+				        	<option value="18" class="time_18">18:00</option>
+				        	<option value="19" class="time_19">19:00</option>
 			        	</select>
-			        	<select id="startTime" class="sod timeSelect custom-select">
+			        	<select id="end' . $row['id'] . '" class="sod timeSelect custom-select">
 			          		<option value="ph" selected="selected">END</option>
 			          		<!-- More options loaded dynamically -->
-				        	<option value="08:00" class="time_00">08:00</option>
-				        	<option value="09:00" class="time_00">09:00</option>
-				        	<option value="10:00" class="time_00">10:00</option>
-				        	<option value="11:00" class="time_00">11:00</option>
-				        	<option value="12:00" class="time_00">12:00</option>
-				        	<option value="13:00" class="time_00">13:00</option>
-				        	<option value="14:00" class="time_00">14:00</option>
-				        	<option value="15:00" class="time_00">15:00</option>
-				        	<option value="16:00" class="time_00">16:00</option>
-				        	<option value="17:00" class="time_00">17:00</option>
-				        	<option value="18:00" class="time_00">18:00</option>
-				        	<option value="19:00" class="time_00">19:00</option>
+				    		<option value="8" class="time_8">08:00</option>
+				        	<option value="9" class="time_9">09:00</option>
+				        	<option value="10" class="time_10">10:00</option>
+				        	<option value="11" class="time_11">11:00</option>
+				        	<option value="12" class="time_12">12:00</option>
+				        	<option value="13" class="time_13">13:00</option>
+				        	<option value="14" class="time_14">14:00</option>
+				        	<option value="15" class="time_15">15:00</option>
+				        	<option value="16" class="time_16">16:00</option>
+				        	<option value="17" class="time_17">17:00</option>
+				        	<option value="18" class="time_18">18:00</option>
+				        	<option value="19" class="time_19">19:00</option>
 			        	</select>
 		          </div>
 		        </form>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Send message</button>
+		        <button type="button" class="btn btn-primary">Book</button>
 		      </div>
 		    </div>
 		  </div>
