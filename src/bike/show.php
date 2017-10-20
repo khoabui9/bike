@@ -42,54 +42,32 @@ echo '<div id="' . $row['id'] . '" class="col-sm-12 bike_detail" style="padding:
 			          		<option value="ph" selected="selected">START</option>
 			          		<!-- More options loaded dynamically -->
 				        	<option value="08:00" class="time_00">08:00</option>
-				        	<option value="08:30" class="time_30">08:30</option>
 				        	<option value="09:00" class="time_00">09:00</option>
-				        	<option value="09:30" class="time_30">09:30</option>
 				        	<option value="10:00" class="time_00">10:00</option>
-				        	<option value="10:30" class="time_30">10:30</option>
 				        	<option value="11:00" class="time_00">11:00</option>
-				        	<option value="11:30" class="time_30">11:30</option>
 				        	<option value="12:00" class="time_00">12:00</option>
-				        	<option value="12:30" class="time_30">12:30</option>
 				        	<option value="13:00" class="time_00">13:00</option>
-				        	<option value="13:30" class="time_30">13:30</option>
 				        	<option value="14:00" class="time_00">14:00</option>
-				        	<option value="14:30" class="time_30">14:30</option>
 				        	<option value="15:00" class="time_00">15:00</option>
-				        	<option value="15:30" class="time_30">15:30</option>
 				        	<option value="16:00" class="time_00">16:00</option>
-				        	<option value="16:30" class="time_30">16:30</option>
 				        	<option value="17:00" class="time_00">17:00</option>
-				        	<option value="17:30" class="time_30">17:30</option>
 				        	<option value="18:00" class="time_00">18:00</option>
-				        	<option value="18:30" class="time_30">18:30</option>
 				        	<option value="19:00" class="time_00">19:00</option>
 			        	</select>
 			        	<select id="startTime" class="sod timeSelect custom-select">
 			          		<option value="ph" selected="selected">END</option>
 			          		<!-- More options loaded dynamically -->
 				        	<option value="08:00" class="time_00">08:00</option>
-				        	<option value="08:30" class="time_30">08:30</option>
 				        	<option value="09:00" class="time_00">09:00</option>
-				        	<option value="09:30" class="time_30">09:30</option>
 				        	<option value="10:00" class="time_00">10:00</option>
-				        	<option value="10:30" class="time_30">10:30</option>
 				        	<option value="11:00" class="time_00">11:00</option>
-				        	<option value="11:30" class="time_30">11:30</option>
 				        	<option value="12:00" class="time_00">12:00</option>
-				        	<option value="12:30" class="time_30">12:30</option>
 				        	<option value="13:00" class="time_00">13:00</option>
-				        	<option value="13:30" class="time_30">13:30</option>
 				        	<option value="14:00" class="time_00">14:00</option>
-				        	<option value="14:30" class="time_30">14:30</option>
 				        	<option value="15:00" class="time_00">15:00</option>
-				        	<option value="15:30" class="time_30">15:30</option>
 				        	<option value="16:00" class="time_00">16:00</option>
-				        	<option value="16:30" class="time_30">16:30</option>
 				        	<option value="17:00" class="time_00">17:00</option>
-				        	<option value="17:30" class="time_30">17:30</option>
 				        	<option value="18:00" class="time_00">18:00</option>
-				        	<option value="18:30" class="time_30">18:30</option>
 				        	<option value="19:00" class="time_00">19:00</option>
 			        	</select>
 		          </div>

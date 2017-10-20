@@ -18,7 +18,7 @@
                           <option value="undefined" selected>Model</option>
                           <option value="city">City</option>
                           <option value="racing">Racing</option>
-                          <option value="fix">Fixed gear</option>
+                          <option value="fix gear">Fixed gear</option>
                           <option value="road">Road</option>
                           <option value="track">Track</option>
                         </select>

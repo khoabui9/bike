@@ -13,6 +13,11 @@
                               <li><a href="#">Account</a></li>
                             </ul>
                         </div>
+                         <div class="bottom col-sm-12">
+                            <ul>
+                              <li><a href="#">Log out</a></li>
+                            </ul>
+                        </div>
                 </div>';
 ?>
 

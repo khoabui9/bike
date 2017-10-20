@@ -9,6 +9,7 @@ body {
 	background-color: #252839;
 	float: left;
 	padding: 0;
+    font-size: 20px;
 }
 /*.dashboard {
 	height: 100vh;
@@ -85,4 +86,9 @@ a {
 
 .text {
     color: black;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 50;
 }

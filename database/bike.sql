@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 20, 2017 at 02:32 PM
+-- Generation Time: Oct 20, 2017 at 03:51 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `time_end` time NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `user_id` (`user_id`),
-  UNIQUE KEY `bike_id` (`bike_id`)
+  UNIQUE KEY `bike_id` (`bike_id`),
+  KEY `user_id` (`user_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -125,7 +125,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` text NOT NULL,
   `password` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `password`) VALUES
+(1, 'khoa@bike.com', '123'),
+(2, 'tung@bike.com', '123'),
+(3, 'an@bike.com', '123'),
+(4, 'duc@bike.com', '123');
 
 --
 -- Constraints for dumped tables
@@ -147,13 +157,8 @@ ALTER TABLE `feedback`
 -- Constraints for table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`bike_id`) REFERENCES `bike` (`id`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id`) REFERENCES `reservation` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`bike_id`) REFERENCES `bike` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
