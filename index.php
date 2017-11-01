@@ -1,8 +1,8 @@
 <?php
 include('login.php'); // Includes Login Script
 
-if(isset($_SESSION['login_user'])){
-header("location: src/dashboard.php");
+if(isset($_SESSION['login_user'])) {
+  header("location: src/dashboard.php");
 }
 ?>
 
@@ -65,14 +65,14 @@ header("location: src/dashboard.php");
   <div class="use-fadeIn">
     <div class="container">
       <div class="text-center front-box well opac">
-        <form action="/action_page.php">
+        <form action="signup.php" method="post">
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email-su">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd-su">
           </div>
           <div class="checkbox">
           </div>

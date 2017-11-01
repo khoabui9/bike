@@ -11,6 +11,7 @@
                               <li><a class="" href="#">Book a bike</a></li>
                               <li><a href="#">Account</a></li>
                               <li><a href="#">My Booking</a></li>
+                              <li><a href="../logout.php">Log out!</a></li>
                             </ul>
                         </div>
                 </div>';

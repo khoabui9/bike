@@ -24,6 +24,7 @@
             </div>
         </div>
     </div>
+   
 <script type="text/javascript" src="../public/js/app.js"></script>
 </body>
 </html>
