@@ -1,5 +1,6 @@
 
 <?php
+
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {
@@ -23,13 +24,15 @@ $db = mysqli_select_db($connection, "bike") or die("Could not select examples");
 // SQL query to fetch information of registerd users and finds user match.
 $query = mysqli_query($connection, "select * from user where password='$password' AND email='$username'");
 $rows = mysqli_num_rows($query);
+
 if ($rows == 1) {
-$_SESSION['login_user']=$username; // Initializing Session
+$_SESSION['login_user']=$username;// Initializing Session
 //header("location: profile.php"); // Redirecting To Other Page
 } else {
 $error = "Username or Password is invalid";
 }
 mysqli_close($connection); // Closing Connection
 }
+include 'session.php';
 }
 ?>

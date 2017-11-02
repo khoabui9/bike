@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="../public/bootstrap/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="../public/css/style.css"  media="screen,projection"/>
+        <script type="text/javascript" src="../public/js/js.cookie.js"></script>
+
 </head>
 <body>
     <div class="row">

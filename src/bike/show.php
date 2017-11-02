@@ -35,10 +35,10 @@ echo '<div id="' . $row['id'] . '" class="col-sm-12 bike_detail" style="padding:
 		        <form>
 		          <div class="form-group">
 		            <label for="datepicker" class="form-control-label">Date:</label>
-		            <input type="text" class="date' . $row['id'] . ' form-control" id="datepicker">
+		            <input type="text" class="datetime date' . $row['id'] . ' form-control" id="datepicker" required>
 		          </div>
 		          <div class="form-group">
-					    <select id="start' . $row['id'] . '" class="sod timeSelect custom-select">
+					    <select id="start' . $row['id'] . '" class="time_start sod timeSelect custom-select" required>
 			          		<option value="ph" selected="selected">START</option>
 			          		<!-- More options loaded dynamically -->
 				        	<option value="8" class="time_8">08:00</option>
@@ -54,7 +54,7 @@ echo '<div id="' . $row['id'] . '" class="col-sm-12 bike_detail" style="padding:
 				        	<option value="18" class="time_18">18:00</option>
 				        	<option value="19" class="time_19">19:00</option>
 			        	</select>
-			        	<select id="end' . $row['id'] . '" class="sod timeSelect custom-select">
+			        	<select id="end' . $row['id'] . '" class="time_end sod timeSelect custom-select" required>
 			          		<option value="ph" selected="selected">END</option>
 			          		<!-- More options loaded dynamically -->
 				    		<option value="8" class="time_8">08:00</option>
@@ -75,7 +75,7 @@ echo '<div id="' . $row['id'] . '" class="col-sm-12 bike_detail" style="padding:
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Book</button>
+		        <button id="' . $row['id'] . '" type="button" class="book-bike btn btn-primary">Book</button>
 		      </div>
 		    </div>
 		  </div>

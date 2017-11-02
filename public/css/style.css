@@ -92,3 +92,10 @@ a {
     position: absolute;
     bottom: 50;
 }
+
+.account {
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
