@@ -1,8 +1,12 @@
 <?php
 
 include '../config.php';
-session_start();
 
+session_start();
+  if( !isset($_SESSION["login_user"]) ){
+    header("location:../../index.php");
+    exit();
+}
 $url = $_SERVER["REQUEST_URI"];
 $parts = parse_url($url);
 parse_str($parts['query'], $query);

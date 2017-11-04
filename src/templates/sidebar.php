@@ -1,6 +1,9 @@
 <?php
-  session_start();
-
+session_start();
+  if( !isset($_SESSION["login_user"]) ){
+    header("location:../index.php");
+    exit();
+}
     echo '
                 <div class="col-sm-2 navbar-left">
                         <div class="text-center col-sm-12">

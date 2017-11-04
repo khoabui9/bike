@@ -1,6 +1,5 @@
 
 <?php
-
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {
@@ -33,6 +32,15 @@ $error = "Username or Password is invalid";
 }
 mysqli_close($connection); // Closing Connection
 }
+// Send the email to the new user
+
+$to = $email;
+$subject = "Register Completed!";
+$txt = "Hi, " . $email. " \nWelcome to our bike renting system! Now you can login with your email and password!";
+$headers = "From: webmaster@example.com" . "\r\n";
+
+mail($to,$subject,$txt,$headers);
+
 include 'session.php';
 }
 ?>
